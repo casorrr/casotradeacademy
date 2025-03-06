@@ -7,167 +7,115 @@
     <style>
         /* Estilo general */
         body {
+            margin: 0;
             font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #121212;
-            color: #fff;
-        }
-
-        /* Header */
-        header {
-            background-color: #000;
-            color: #00FF00; /* Verde brillante */
-            padding: 20px;
-            text-align: center;
-        }
-
-        header h1 {
-            margin: 0;
-            font-size: 2.5em;
-        }
-
-        nav {
-            margin-top: 10px;
-        }
-
-        nav a {
-            color: #00FF00;
-            margin: 0 15px;
-            text-decoration: none;
-            font-weight: bold;
-        }
-
-        nav a:hover {
-            text-decoration: underline;
-        }
-
-        /* Sección de Cursos */
-        .courses {
+            background: linear-gradient(45deg, #1a1a1a, #333333);
+            color: white;
+            height: 100vh;
             display: flex;
+            flex-direction: column;
             justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        /* Cabecera */
+        header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        h1 {
+            font-size: 3em;
+            color: #00e676;
+        }
+
+        /* Sección de cursos */
+        .courses {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 20px;
-            flex-wrap: wrap;
-            margin: 50px 20px;
+            width: 100%;
+            max-width: 1200px;
         }
 
         .course {
-            background-color: #1a1a1a;
-            border-radius: 10px;
+            background: #444444;
             padding: 20px;
-            width: 300px;
-            text-align: center;
-            transition: transform 0.3s;
+            border-radius: 10px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
 
         .course:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 5px 15px rgba(0, 255, 0, 0.3);
+            transform: scale(1.05);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
         }
 
-        .course h3 {
-            color: #00FF00;
+        .course h2 {
+            color: #00e676;
+            font-size: 1.5em;
         }
 
         .course p {
-            color: #ccc;
+            font-size: 1em;
+            margin: 10px 0;
         }
 
-        .course button {
-            background-color: #00FF00;
-            color: #000;
-            padding: 10px;
-            border: none;
-            border-radius: 5px;
-            font-size: 1.1em;
-            cursor: pointer;
-            transition: background-color 0.3s;
-        }
-
-        .course button:hover {
-            background-color: #009900;
-        }
-
-        /* Sección de "Sobre Nosotros" */
-        .about {
-            background-color: #1a1a1a;
-            padding: 50px 20px;
-            text-align: center;
-        }
-
-        .about h2 {
-            color: #00FF00;
-        }
-
-        .about p {
-            color: #ccc;
-            font-size: 1.1em;
-            max-width: 800px;
-            margin: 0 auto;
-        }
-
-        /* Footer */
-        footer {
-            background-color: #000;
-            color: #00FF00;
-            padding: 10px;
-            text-align: center;
-            font-size: 0.9em;
-        }
-
-        footer a {
-            color: #00FF00;
+        .course a {
             text-decoration: none;
+            color: #00e676;
+            font-weight: bold;
+            font-size: 1.2em;
         }
 
-        footer a:hover {
+        .course a:hover {
             text-decoration: underline;
         }
 
+        /* Estilo para los botones */
+        button {
+            background-color: #00e676;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.2em;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #004d40;
+        }
     </style>
 </head>
 <body>
 
-    <!-- Header -->
+    <!-- Cabecera de la página -->
     <header>
         <h1>CasoTrade Academy</h1>
-        <nav>
-            <a href="#courses">Cursos</a>
-            <a href="#about">Sobre Nosotros</a>
-            <a href="#contact">Contacto</a>
-        </nav>
+        <p>Bienvenido a la mejor plataforma de aprendizaje en inversiones.</p>
+        <button onclick="window.location.href='#courses'">Ver Cursos</button>
     </header>
 
     <!-- Sección de Cursos -->
     <section id="courses" class="courses">
         <div class="course">
-            <h3>Curso de Inversión Básica</h3>
-            <p>Aprende los fundamentos de la inversión en la bolsa.</p>
-            <button>Inscribirse</button>
+            <h2>Curso de Inversiones Básicas</h2>
+            <p>Aprende los conceptos fundamentales sobre inversiones, cómo comenzar y construir tu portafolio.</p>
+            <a href="curso1.html">Ver más</a>
         </div>
         <div class="course">
-            <h3>Curso de Análisis Técnico</h3>
-            <p>Domina las herramientas para leer gráficos y tomar decisiones.</p>
-            <button>Inscribirse</button>
+            <h2>Curso de Análisis Técnico</h2>
+            <p>Domina las herramientas y estrategias del análisis técnico para hacer predicciones sobre el mercado.</p>
+            <a href="curso2.html">Ver más</a>
         </div>
         <div class="course">
-            <h3>Curso de Estrategias Avanzadas</h3>
-            <p>Conoce las mejores estrategias para maximizar tus ganancias.</p>
-            <button>Inscribirse</button>
+            <h2>Curso de Inversión en Criptomonedas</h2>
+            <p>Conoce cómo invertir en criptomonedas, los riesgos y cómo administrar tu portafolio.</p>
+            <a href="curso3.html">Ver más</a>
         </div>
     </section>
-
-    <!-- Sección Sobre Nosotros -->
-    <section id="about" class="about">
-        <h2>Sobre CasoTrade Academy</h2>
-        <p>En CasoTrade Academy, ofrecemos formación de calidad para ayudarte a convertirte en un experto en inversiones. Nuestros cursos están diseñados tanto para principiantes como para inversores avanzados, cubriendo una variedad de temas desde análisis técnico hasta estrategias avanzadas.</p>
-    </section>
-
-    <!-- Footer -->
-    <footer>
-        <p>&copy; 2025 CasoTrade Academy. Todos los derechos reservados.</p>
-        <p><a href="mailto:contact@casotradeacademy.com">contact@casotradeacademy.com</a></p>
-    </footer>
 
 </body>
 </html>
