@@ -9,41 +9,68 @@
         body {
             margin: 0;
             font-family: Arial, sans-serif;
-            background: linear-gradient(45deg, #1a1a1a, #333333);
+            background-color: #000000; /* Fondo negro sólido */
             color: white;
-            height: 100vh;
+            height: 100%;
             display: flex;
             flex-direction: column;
-            justify-content: center;
+            justify-content: flex-start;
             align-items: center;
             padding: 20px;
+            overflow-x: hidden; /* Previene el desplazamiento horizontal */
         }
 
         /* Cabecera */
         header {
             text-align: center;
             margin-bottom: 50px;
+            width: 100%;
         }
 
         h1 {
             font-size: 3em;
-            color: #00e676;
+            color: #00e676; /* Verde */
+            margin: 0;
         }
 
-        /* Sección de cursos */
+        p {
+            font-size: 1.2em;
+            margin-top: 10px;
+            color: #dcdcdc; /* Gris claro */
+        }
+
+        /* Botón principal */
+        button {
+            background-color: #00e676;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.2em;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #004d40;
+        }
+
+        /* Sección de Cursos */
         .courses {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 20px;
             width: 100%;
             max-width: 1200px;
+            margin-top: 50px;
         }
 
         .course {
-            background: #444444;
+            background: #333333; /* Fondo oscuro de los cursos */
             padding: 20px;
             border-radius: 10px;
             transition: transform 0.3s ease, box-shadow 0.3s ease;
+            height: 250px; /* Asegura que todos los bloques tengan la misma altura */
         }
 
         .course:hover {
@@ -72,20 +99,10 @@
             text-decoration: underline;
         }
 
-        /* Estilo para los botones */
-        button {
-            background-color: #00e676;
-            color: white;
-            padding: 10px 20px;
-            border: none;
-            border-radius: 5px;
-            font-size: 1.2em;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
-        }
-
-        button:hover {
-            background-color: #004d40;
+        /* Asegura que el contenido no se corte */
+        .container {
+            max-width: 100%;
+            overflow: auto;
         }
     </style>
 </head>
@@ -103,17 +120,17 @@
         <div class="course">
             <h2>Curso de Inversiones Básicas</h2>
             <p>Aprende los conceptos fundamentales sobre inversiones, cómo comenzar y construir tu portafolio.</p>
-            <a href="curso1.html">Ver más</a>
+            <a href="#">Próximamente</a> <!-- Cambia este enlace por el enlace real cuando tengas las páginas -->
         </div>
         <div class="course">
             <h2>Curso de Análisis Técnico</h2>
             <p>Domina las herramientas y estrategias del análisis técnico para hacer predicciones sobre el mercado.</p>
-            <a href="curso2.html">Ver más</a>
+            <a href="#">Próximamente</a> <!-- Cambia este enlace por el enlace real cuando tengas las páginas -->
         </div>
         <div class="course">
             <h2>Curso de Inversión en Criptomonedas</h2>
             <p>Conoce cómo invertir en criptomonedas, los riesgos y cómo administrar tu portafolio.</p>
-            <a href="curso3.html">Ver más</a>
+            <a href="#">Próximamente</a> <!-- Cambia este enlace por el enlace real cuando tengas las páginas -->
         </div>
     </section>
 
