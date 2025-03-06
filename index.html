@@ -5,34 +5,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CasoTrade Academy</title>
     <style>
+        /* Estilo general */
         body {
             margin: 0;
             font-family: Arial, sans-serif;
-            background-color: #000000;
+            background-color: #000000; /* Fondo negro sólido */
             color: white;
+            height: 100%;
             display: flex;
             flex-direction: column;
+            justify-content: flex-start;
             align-items: center;
             padding: 20px;
+            overflow-x: hidden; /* Previene el desplazamiento horizontal */
         }
 
+        /* Cabecera */
         header {
             text-align: center;
             margin-bottom: 50px;
+            width: 100%;
         }
 
         h1 {
             font-size: 3em;
-            color: #00e676;
+            color: #00e676; /* Verde */
             margin: 0;
         }
 
         p {
             font-size: 1.2em;
             margin-top: 10px;
-            color: #dcdcdc;
+            color: #dcdcdc; /* Gris claro */
         }
 
+        /* Botón principal */
         button {
             background-color: #00e676;
             color: white;
@@ -41,15 +48,17 @@
             border-radius: 5px;
             font-size: 1.2em;
             cursor: pointer;
+            transition: background-color 0.3s ease;
         }
 
         button:hover {
             background-color: #004d40;
         }
 
+        /* Sección de Cursos */
         .courses {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 20px;
             width: 100%;
             max-width: 1200px;
@@ -57,25 +66,16 @@
         }
 
         .course {
-            background: #333333;
+            background: #333333; /* Fondo oscuro de los cursos */
             padding: 20px;
             border-radius: 10px;
-            text-align: center;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
             transition: transform 0.3s ease, box-shadow 0.3s ease;
+            height: 250px; /* Asegura que todos los bloques tengan la misma altura */
         }
 
         .course:hover {
             transform: scale(1.05);
-            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.7);
-        }
-
-        .course img {
-            width: 100%;
-            height: 200px;
-            object-fit: cover;
-            border-radius: 10px;
-            margin-bottom: 15px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
         }
 
         .course h2 {
@@ -84,68 +84,94 @@
         }
 
         .course p {
-            font-size: 1.1em;
-            color: #dcdcdc;
+            font-size: 1em;
+            margin: 10px 0;
         }
 
         .course a {
             text-decoration: none;
             color: #00e676;
             font-weight: bold;
+            font-size: 1.2em;
         }
 
+        .course a:hover {
+            text-decoration: underline;
+        }
+
+        /* Asegura que el contenido no se corte */
+        .container {
+            max-width: 100%;
+            overflow: auto;
+        }
+
+        /* Sección de Contacto */
         .contact {
-            margin-top: 50px;
             background-color: #333333;
             padding: 30px;
-            text-align: center;
+            margin-top: 50px;
             border-radius: 10px;
+            width: 100%;
             max-width: 600px;
+            text-align: center;
         }
 
+        .contact h2 {
+            color: #00e676;
+            font-size: 2em;
+        }
+
+        .contact p {
+            font-size: 1.1em;
+            color: #dcdcdc;
+        }
+
+        /* Sección de Disclaimer */
         .disclaimer {
             text-align: center;
             font-size: 0.8em;
             margin-top: 50px;
             color: #888888;
         }
+
     </style>
 </head>
 <body>
 
+    <!-- Cabecera de la página -->
     <header>
         <h1>CasoTrade Academy</h1>
         <p>Bienvenido a la mejor comunidad de aprendizaje en inversiones.</p>
         <button onclick="window.location.href='#courses'">Ver Cursos</button>
     </header>
 
+    <!-- Sección de Cursos -->
     <section id="courses" class="courses">
         <div class="course">
-            <img src="https://via.placeholder.com/600x400/00e676/FFFFFF?text=Curso+Inversiones+B%C3%A1sicas" alt="Curso de Inversiones Básicas">
             <h2>Curso de Inversiones Básicas</h2>
             <p>Aprende los conceptos fundamentales sobre inversiones, cómo comenzar y construir tu portafolio.</p>
-            <a href="curso1.html">Ver Detalles</a>
+            <button onclick="window.location.href='curso1.html'">Ver Detalles</button> <!-- Página del curso 1 -->
         </div>
         <div class="course">
-            <img src="https://via.placeholder.com/600x400/00e676/FFFFFF?text=Curso+An%C3%A1lisis+T%C3%A9cnico" alt="Curso de Análisis Técnico">
             <h2>Curso de Análisis Técnico</h2>
             <p>Domina las herramientas y estrategias del análisis técnico para hacer predicciones sobre el mercado.</p>
-            <a href="curso2.html">Ver Detalles</a>
+            <button onclick="window.location.href='curso2.html'">Ver Detalles</button> <!-- Página del curso 2 -->
         </div>
         <div class="course">
-            <img src="https://via.placeholder.com/600x400/00e676/FFFFFF?text=Curso+Criptomonedas" alt="Curso de Inversión en Criptomonedas">
             <h2>Curso de Inversión en Criptomonedas</h2>
             <p>Conoce cómo invertir en criptomonedas, los riesgos y cómo administrar tu portafolio.</p>
-            <a href="curso3.html">Ver Detalles</a>
+            <button onclick="window.location.href='curso3.html'">Ver Detalles</button> <!-- Página del curso 3 -->
         </div>
     </section>
 
+    <!-- Sección de Contacto -->
     <section class="contact">
         <h2>Contacto</h2>
-        <p>Si tienes alguna pregunta o inquietud, no dudes en contactarnos.</p>
-        <p>Email: <a href="mailto:contacto@casotradeacademy.com">contacto@casotradeacademy.com</a></p>
+        <p>Si tienes alguna pregunta o inquietud, no dudes en contactarnos. ¡Estamos aquí para ayudarte!</p>
+        <p>Email: <a href="mailto:contacto@casotradeacademy.com" style="color: #00e676;">contacto@casotradeacademy.com</a></p>
     </section>
 
+    <!-- Disclaimer -->
     <section class="disclaimer">
         <p>© 2025 CasoTrade Academy. Todos los derechos reservados. Los cursos son proporcionados con fines educativos y no garantizan resultados de inversión.</p>
     </section>
