@@ -4,247 +4,114 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CasoTrade Academy</title>
-    <style>
-        /* Estilo general */
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background-color: #121212; /* Fondo negro suave */
-            color: white;
-            height: 100%;
-            display: flex;
-            flex-direction: column;
-            justify-content: flex-start;
-            align-items: center;
-            padding: 20px;
-            overflow-x: hidden;
-        }
-
-        /* Cabecera */
-        header {
-            text-align: center;
-            margin-top: 100px; /* Más margen arriba */
-            margin-bottom: 50px;
-            width: 100%;
-        }
-
-        h1 {
-            font-size: 3em;
-            color: #aaff00; /* Amarillo verdoso fosforito */
-            margin: 0;
-        }
-
-        p {
-            font-size: 1.2em;
-            margin-top: 10px;
-            color: #dcdcdc;
-        }
-
-        /* Botón principal */
-        button {
-            background-color: #aaff00; /* Amarillo verdoso fosforito */
-            color: white;
-            padding: 10px 20px;
-            border: none;
-            border-radius: 5px;
-            font-size: 1.2em;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-        }
-
-        button:hover {
-            background-color: #78d100;
-        }
-
-        /* Sección de Cursos */
-        .courses {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 20px;
-            width: 100%;
-            max-width: 1200px;
-            margin-top: 50px;
-        }
-
-        .course {
-            background: #333333;
-            padding: 20px;
-            border-radius: 10px;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            height: 250px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Sombra suave */
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            align-items: center; /* Centrar contenido horizontalmente */
-        }
-
-        .course:hover {
-            transform: scale(1.05);
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
-        }
-
-        .course h2 {
-            color: #aaff00;
-            font-size: 1.5em;
-        }
-
-        .course p {
-            font-size: 1em;
-            margin: 10px 0;
-        }
-
-        .course a {
-            text-decoration: none;
-            color: #aaff00;
-            font-weight: bold;
-            font-size: 1.2em;
-        }
-
-        .course a:hover {
-            text-decoration: underline;
-        }
-
-        /* Botón "Ir al curso" */
-        .course a {
-            display: inline-block;
-            padding: 10px 20px;
-            background-color: #4f5b62; /* Gris oscuro azulado */
-            color: white;
-            font-size: 1.1em;
-            text-decoration: none;
-            border-radius: 5px;
-            border: 2px solid #3b464d; /* Borde más oscuro */
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-            transition: background-color 0.3s ease, transform 0.3s ease, color 0.3s ease;
-            margin-top: auto; /* Para que quede al fondo de la caja */
-        }
-
-        .course a:hover {
-            background-color: white; /* Cambia a blanco al hacer hover */
-            color: #333333; /* Cambia el texto a gris oscuro */
-            transform: translateY(-3px);
-        }
-
-        /* Sección de Contacto */
-        .contact {
-            background-color: #333333;
-            padding: 30px;
-            margin-top: 50px;
-            border-radius: 10px;
-            width: 100%;
-            max-width: 600px;
-            text-align: center;
-        }
-
-        .contact h2 {
-            color: #aaff00;
-            font-size: 2em;
-        }
-
-        .contact p {
-            font-size: 1.1em;
-            color: #dcdcdc;
-        }
-
-        /* Sección de Redes Sociales y Discord */
-        .community-description {
-            background-color: #2c2c2c;
-            color: #dcdcdc;
-            padding: 20px;
-            margin-top: 50px;
-            width: 100%;
-            max-width: 900px;
-            text-align: center;
-            border-radius: 10px;
-        }
-
-        .community-description h2 {
-            color: #aaff00;
-            font-size: 2em;
-        }
-
-        .discord-link {
-            background-color: #7289da; /* Color oficial de Discord */
-            color: white;
-            padding: 15px 25px;
-            border-radius: 5px;
-            display: inline-block;
-            font-size: 1.2em;
-            text-decoration: none;
-            margin-top: 20px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-        }
-
-        .discord-link:hover {
-            background-color: #5b6e8b;
-        }
-
-        /* Sección de Disclaimer */
-        .disclaimer {
-            text-align: center;
-            font-size: 0.8em;
-            margin-top: 50px;
-            color: #888888;
-        }
-
-    </style>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-
-    <!-- Cabecera de la página -->
     <header>
         <h1>CasoTrade Academy</h1>
-        <p>Bienvenido a la mejor comunidad de aprendizaje en inversiones.</p>
-        <button onclick="window.location.href='#courses'">Ver Cursos</button>
+        <nav>
+            <ul>
+                <li><a href="#cursos">Mostrar Cursos</a></li>
+                <li><a href="#faq">FAQ</a></li>
+                <li><a href="#membresia">Membresía</a></li>
+                <li><a href="#recursos">Recursos</a></li>
+                <li><a href="#certificados">Certificados</a></li>
+                <li><a href="#blog">Blog</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
     </header>
-
-    <!-- Descripción de la Comunidad -->
-    <section class="community-description">
-        <h2>¿Qué es CasoTrade Academy?</h2>
-        <p>Somos una comunidad dedicada a enseñar y aprender sobre inversiones de forma colaborativa. En CasoTrade Academy, todos compartimos nuestros conocimientos y resultados para que podamos ser rentables juntos. Nuestro objetivo es ayudarte a mejorar tus habilidades, aprender nuevas estrategias y compartir experiencias que te permitan crecer en el mundo de las inversiones.</p>
-    </section>
-
-    <!-- Sección de Cursos -->
-    <section id="courses" class="courses">
-        <div class="course">
-            <h2>Curso de Inversiones Básicas</h2>
-            <p>Aprende los conceptos fundamentales sobre inversiones, cómo comenzar y construir tu portafolio.</p>
-            <a href="curso1.html">Ir al Curso</a>
+    
+    <section id="cursos">
+        <h2>Nuestros Cursos</h2>
+        <div class="curso">
+            <h3>Curso 1</h3>
+            <p>Introducción a las inversiones</p>
+            <a href="curso1.html" class="boton">Ir al curso</a>
         </div>
-        <div class="course">
-            <h2>Curso de Análisis Técnico</h2>
-            <p>Domina las herramientas y estrategias del análisis técnico para hacer predicciones sobre el mercado.</p>
-            <a href="curso2.html">Ir al Curso</a>
+        <div class="curso">
+            <h3>Curso 2</h3>
+            <p>Análisis técnico</p>
+            <a href="curso2.html" class="boton">Ir al curso</a>
         </div>
-        <div class="course">
-            <h2>Curso de Inversión en Criptomonedas</h2>
-            <p>Conoce cómo invertir en criptomonedas, los riesgos y cómo administrar tu portafolio.</p>
-            <a href="curso3.html">Ir al Curso</a>
+        <div class="curso">
+            <h3>Curso 3</h3>
+            <p>Criptomonedas</p>
+            <a href="curso3.html" class="boton">Ir al curso</a>
         </div>
     </section>
-
-    <!-- Sección de Redes Sociales y Discord -->
-    <section class="social-media">
-        <h2>Conéctate con Nosotros</h2>
-        <p>Síguenos en nuestras redes sociales y forma parte de la comunidad:</p>
-        <a href="https://discord.gg/VqBcaV92s3" target="_blank" class="discord-link">
-            Únete a nuestro Discord
-        </a>
+    
+    <section id="faq">
+        <h2>Preguntas Frecuentes</h2>
+        <div class="faq-item">
+            <h3>¿Qué cursos ofrecen?</h3>
+            <p>Ofrecemos cursos de Inversiones Básicas, Análisis Técnico, Inversión en Criptomonedas y más...</p>
+        </div>
+        <div class="faq-item">
+            <h3>¿Cómo puedo unirme a la comunidad?</h3>
+            <p>Puedes unirte a nuestra comunidad a través de nuestro servidor de Discord. ¡Haz clic en el botón de arriba!</p>
+        </div>
     </section>
-
-    <!-- Sección de Contacto -->
-    <section class="contact">
+    
+    <section id="membresia">
+        <h2>Planes de Membresía</h2>
+        <div class="plan">
+            <h3>Plan Básico</h3>
+            <p>Acceso a los cursos básicos y contenido gratuito. Perfecto para empezar.</p>
+            <p><strong>Precio:</strong> Gratis</p>
+        </div>
+        <div class="plan">
+            <h3>Plan Premium</h3>
+            <p>Acceso a todos los cursos, estrategias avanzadas, análisis en vivo, y más.</p>
+            <p><strong>Precio:</strong> 19.99€/mes</p>
+        </div>
+    </section>
+    
+    <section id="recursos">
+        <h2>Recursos Gratuitos</h2>
+        <p>Accede a nuestra biblioteca de recursos gratuitos para mejorar tus conocimientos sobre inversiones.</p>
+        <a href="ebook.pdf" class="btn">Descargar E-book</a>
+        <a href="#certificados" class="btn">Ver Certificados</a>
+    </section>
+    
+    <section id="certificados">
+        <h2>Certificados</h2>
+        <p>Obtén un certificado al completar nuestros cursos. Valida tu conocimiento y mejora tu perfil profesional.</p>
+        <a href="#cursos" class="btn">Ver Cursos</a>
+    </section>
+    
+    <section id="blog">
+        <h2>Últimas Noticias y Artículos</h2>
+        <p>Consulta nuestras publicaciones más recientes sobre estrategias de inversión, noticias del mercado y análisis técnico.</p>
+        <a href="#" class="btn">Ir al Blog</a>
+    </section>
+    
+    <section id="contacto">
         <h2>Contacto</h2>
-        <p>Si tienes alguna pregunta o inquietud, no dudes en contactarnos. ¡Estamos aquí para ayudarte!</p>
-        <p>Email: <a href="mailto:contacto@casotradeacademy.com" style="color: #66ccff;">contacto@casotradeacademy.com</a></p>
+        <p>Si tienes alguna pregunta o sugerencia, contáctanos a través del siguiente formulario:</p>
+        <form action="#" method="post">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required>
+            
+            <label for="email">Correo Electrónico:</label>
+            <input type="email" id="email" name="email" required>
+            
+            <label for="mensaje">Mensaje:</label>
+            <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
+            
+            <button type="submit">Enviar</button>
+        </form>
     </section>
-
-    <!-- Disclaimer -->
-    <section class="disclaimer">
-        <p>© 2025 CasoTrade Academy. Todos los derechos reservados. Los cursos son proporcionados con fines educativos y no garantizan resultados de inversión.</p>
-    </section>
-
+    
+    <footer>
+        <h2>Síguenos en Redes Sociales</h2>
+        <a href="https://discord.gg/VqBcaV92s3" class="discord-btn">Únete a nuestro Discord</a>
+        <div class="social-icons">
+            <a href="#"><img src="twitter.png" alt="Twitter"></a>
+            <a href="#"><img src="instagram.png" alt="Instagram"></a>
+            <a href="#"><img src="linkedin.png" alt="LinkedIn"></a>
+        </div>
+        <p>Contacto: <span class="contact-email">contacto@casotrade.com</span></p>
+    </footer>
 </body>
 </html>
