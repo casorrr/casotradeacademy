@@ -3,24 +3,171 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CTrade Academy</title>
+    <title>CasoTrade Academy</title>
     <style>
+        /* Estilo general */
         body {
             font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #121212;
+            color: #fff;
+        }
+
+        /* Header */
+        header {
+            background-color: #000;
+            color: #00FF00; /* Verde brillante */
+            padding: 20px;
             text-align: center;
-            padding: 50px;
-            background-color: #f4f4f4;
         }
-        h1 {
-            color: #333;
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
         }
-        p {
-            color: #666;
+
+        nav {
+            margin-top: 10px;
         }
+
+        nav a {
+            color: #00FF00;
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        /* Sección de Cursos */
+        .courses {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin: 50px 20px;
+        }
+
+        .course {
+            background-color: #1a1a1a;
+            border-radius: 10px;
+            padding: 20px;
+            width: 300px;
+            text-align: center;
+            transition: transform 0.3s;
+        }
+
+        .course:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 5px 15px rgba(0, 255, 0, 0.3);
+        }
+
+        .course h3 {
+            color: #00FF00;
+        }
+
+        .course p {
+            color: #ccc;
+        }
+
+        .course button {
+            background-color: #00FF00;
+            color: #000;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.1em;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .course button:hover {
+            background-color: #009900;
+        }
+
+        /* Sección de "Sobre Nosotros" */
+        .about {
+            background-color: #1a1a1a;
+            padding: 50px 20px;
+            text-align: center;
+        }
+
+        .about h2 {
+            color: #00FF00;
+        }
+
+        .about p {
+            color: #ccc;
+            font-size: 1.1em;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #000;
+            color: #00FF00;
+            padding: 10px;
+            text-align: center;
+            font-size: 0.9em;
+        }
+
+        footer a {
+            color: #00FF00;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
     </style>
 </head>
 <body>
-    <h1>Bienvenido a CTrade Academy</h1>
-    <p>Pronto lanzaremos nuestro sitio web sobre inversiones.</p>
+
+    <!-- Header -->
+    <header>
+        <h1>CasoTrade Academy</h1>
+        <nav>
+            <a href="#courses">Cursos</a>
+            <a href="#about">Sobre Nosotros</a>
+            <a href="#contact">Contacto</a>
+        </nav>
+    </header>
+
+    <!-- Sección de Cursos -->
+    <section id="courses" class="courses">
+        <div class="course">
+            <h3>Curso de Inversión Básica</h3>
+            <p>Aprende los fundamentos de la inversión en la bolsa.</p>
+            <button>Inscribirse</button>
+        </div>
+        <div class="course">
+            <h3>Curso de Análisis Técnico</h3>
+            <p>Domina las herramientas para leer gráficos y tomar decisiones.</p>
+            <button>Inscribirse</button>
+        </div>
+        <div class="course">
+            <h3>Curso de Estrategias Avanzadas</h3>
+            <p>Conoce las mejores estrategias para maximizar tus ganancias.</p>
+            <button>Inscribirse</button>
+        </div>
+    </section>
+
+    <!-- Sección Sobre Nosotros -->
+    <section id="about" class="about">
+        <h2>Sobre CasoTrade Academy</h2>
+        <p>En CasoTrade Academy, ofrecemos formación de calidad para ayudarte a convertirte en un experto en inversiones. Nuestros cursos están diseñados tanto para principiantes como para inversores avanzados, cubriendo una variedad de temas desde análisis técnico hasta estrategias avanzadas.</p>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 CasoTrade Academy. Todos los derechos reservados.</p>
+        <p><a href="mailto:contact@casotradeacademy.com">contact@casotradeacademy.com</a></p>
+    </footer>
+
 </body>
 </html>
