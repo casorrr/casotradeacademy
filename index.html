@@ -137,6 +137,24 @@
             color: #00e676;
         }
 
+        /* Estilo específico para el enlace al Discord */
+        .discord-link {
+            background-color: #7289da; /* Color de fondo de Discord */
+            color: white;
+            padding: 15px 30px;
+            border-radius: 10px;
+            font-size: 1.5em;
+            text-decoration: none;
+            margin-top: 20px;
+            display: inline-block;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        .discord-link:hover {
+            background-color: #5b6eae; /* Color al pasar el ratón */
+            transform: scale(1.05);
+        }
+
     </style>
 </head>
 <body>
@@ -169,12 +187,8 @@
     <section class="social-media">
         <h2>Conéctate con Nosotros</h2>
         <p>Síguenos en nuestras redes sociales y únete a nuestra comunidad:</p>
-        <a href="https://discord.gg/VqBcaV92s3" target="_blank">Únete a nuestro Discord</a>
+        <a href="https://discord.gg/VqBcaV92s3" target="_blank" class="discord-link">Únete a nuestro Discord</a>
         <!-- Aquí puedes agregar más enlaces a redes sociales si lo deseas -->
-        <!-- Ejemplo:
-        <a href="https://www.facebook.com/CasoTradeAcademy" target="_blank">Facebook</a>
-        <a href="https://twitter.com/CasoTradeAcademy" target="_blank">Twitter</a>
-        -->
     </section>
 
     <section class="contact">
