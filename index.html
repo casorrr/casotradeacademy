@@ -74,6 +74,10 @@
             transition: transform 0.3s ease, box-shadow 0.3s ease;
             height: 250px;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Sombra suave */
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center; /* Centrar contenido horizontalmente */
         }
 
         .course:hover {
@@ -113,11 +117,13 @@
             border-radius: 5px;
             border: 2px solid #3b464d; /* Borde más oscuro */
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-            transition: background-color 0.3s ease, transform 0.3s ease;
+            transition: background-color 0.3s ease, transform 0.3s ease, color 0.3s ease;
+            margin-top: auto; /* Para que quede al fondo de la caja */
         }
 
         .course a:hover {
-            background-color: #3b464d; /* Color más oscuro en hover */
+            background-color: white; /* Cambia a blanco al hacer hover */
+            color: #333333; /* Cambia el texto a gris oscuro */
             transform: translateY(-3px);
         }
 
